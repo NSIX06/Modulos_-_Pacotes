@@ -1,0 +1,58 @@
+from meu_pacote import modulo1, modulo2 
+print(modulo1.funcao1())
+print(modulo2.funcao2())
+
+from meu_pacote.subpacote import modulo3 
+print(modulo3.funcao3())
+
+
+from .modulo1 import funcao1
+from .modulo2 import funcao2
+from .modulo3 import funcao3
+
+
+def funcao1():
+    return "Função 1 executada"
+
+def funcao2():
+    return "Função 2 executada"
+
+def funcao3():
+    return "Função 3 executada"
+
+
+from dobro import dobro
+print(dobro(10))
+
+from triplo import triplo
+print(triplo(10))
+
+def triplo(n):
+    return n *3
+
+
+def dobro(n):
+    return n *2
+
+
+from matematica import funcao_soma, funcao_divisao, funcao_subtracao, funcao_multiplicacao
+print(soma.funcao_soma(10, 6))
+print(divisao.funcao_divisao(10, 2))
+print(subtracao.funcao_subtracao(10, 2))
+print(multiplicacao.funcao_multiplicacao(10, 2))
+
+
+
+from matematica import funcao_soma
+print(funcao_soma(10, 6))
+
+from matematica import funcao_divisao
+print(funcao_divisao(10, 2))
+
+from matematica import funcao_subtracao
+print(funcao_subtracao(10, 2))
+
+from matematica import funcao_multiplicacao
+print(funcao_multiplicacao(10, 2))
+
+
