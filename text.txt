@@ -1,3 +1,5 @@
+Exemplos de pacotes e módulos:
+
 from meu_pacote import modulo1, modulo2 
 print(modulo1.funcao1())
 print(modulo2.funcao2())
@@ -34,8 +36,13 @@ def triplo(n):
 def dobro(n):
     return n *2
 
+--------------------------------------------------------
+Códigos dos pacotes e módulos:
+
+main.py Parte 1 -----------------------------------
 
 from matematica import funcao_soma, funcao_divisao, funcao_subtracao, funcao_multiplicacao
+
 print(soma.funcao_soma(10, 6))
 print(divisao.funcao_divisao(10, 2))
 print(subtracao.funcao_subtracao(10, 2))
@@ -54,5 +61,57 @@ print(funcao_subtracao(10, 2))
 
 from matematica import funcao_multiplicacao
 print(funcao_multiplicacao(10, 2))
+
+--------------------------------------------------
+main.py Parte 2 ----------------------------------
+
+from matematica import funcao_soma, funcao_divisao, funcao_subtracao, funcao_multiplicacao
+
+
+print(funcao_soma(10, 2))
+print(funcao_divisao(10, 2))
+print(funcao_subtracao(10, 2))
+print(funcao_multiplicacao(10, 2))
+
+from matematica.avancados import quadrado, cubo
+print(quadrado.funcao_quadrado(10))
+print(cubo.funcao_cubo(10))
+
+---------------------------------------------------
+__init__.py Parte 1 e 2
+
+from .soma import funcao_soma
+from .divisao import funcao_divisao
+from .subtracao import funcao_subtracao
+from .multiplicacao import funcao_multiplicacao
+from .avancados.quadrado import funcao_quadrado
+from .avancados.cubo import funcao_cubo
+
+------------------------------------------------------
+Funções matemáticas:
+
+def funcao_soma(a, b):
+    return a + b
+
+def funcao_subtracao(a, b):
+    return a - b
+
+def funcao_multiplicacao(a,b):
+    return a * b
+
+
+def funcao_divisao(a, b):
+    if b == 0:
+        return "Erro: Divisão por zero!"
+    return a / b
+
+
+def funcao_quadrado(a):
+    return a ** 2
+
+
+def funcao_cubo(a):
+    return a ** 3
+
 
 
